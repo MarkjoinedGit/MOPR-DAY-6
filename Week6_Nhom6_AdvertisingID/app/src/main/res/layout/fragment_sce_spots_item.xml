@@ -15,15 +15,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:orientation="vertical"
         app:flow_verticalAlign="center">
-        <TextView
-            android:id="@+id/item_number"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="@dimen/text_margin"
-            android:textAlignment="center"
-            android:textAppearance="?attr/textAppearanceListItem"
-            android:visibility="gone"
-            tools:layout_editor_absoluteY="16dp"/>
+
 
         <ImageView
             android:id="@+id/thumbnail"
@@ -31,6 +23,14 @@
             android:layout_height="256dp"
             android:onClick="onPictureClickShowDetail"/>
 
+        <TextView
+            android:id="@+id/item_number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/text_margin"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceListItem"
+            tools:layout_editor_absoluteY="16dp"/>
         <TextView
             android:id="@+id/loc"
             android:width="256dp"
