@@ -5,11 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/movie_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.week6_nhom6_advertisingid.fragment.SceSpotsItemFragment"/>
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/navigation"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="start"
+            android:paddingTop="50dp"
+            android:id="@+id/nav_view">
 
-    <androidx.fragment.app.FragmentContainerView
-    android:id="@+id/movie_list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:name="com.example.week6_nhom6_advertisingid.fragment.SceSpotsItemFragment"/>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/primary">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:titleTextColor="@color/white"
+            android:id="@+id/toolbar">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
