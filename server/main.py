@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, request
 app=Flask(__name__)
 
 places = [
@@ -115,13 +115,31 @@ def getPlace():
             }
     )
 
-@app.route('/place/<int:place_id>',methods=['GET'])
-def get_place_by_id(place_id):
-    place = next((p for p in places if p['id'] == place_id), None)
-    if place:
-        return jsonify({'place': place, 'result': 'success'})
+
+@app.route('/place/getdetail', methods=['GET'])
+def get_place_detail_by_id():
+    place_id = request.args.get('id')
+    if place_id is not None:
+        try:
+            place_id = int(place_id)
+            place = next((p for p in places if p['id'] == place_id), None)
+            if place:
+                # Tạo JSON với cấu trúc tương tự như đoạn bạn đã cung cấp
+                response = {
+                    "loc": place["loc"],
+                    "province": place["province"],
+                    "part": place["part"],
+                    "content": place["content"],
+                    "imgUrls": place["imgUrls"],
+                    "result": "success"
+                }
+                return jsonify(response)
+            else:
+                return jsonify({'message': 'Place not found', 'result': 'failure'}), 404
+        except ValueError:
+            return jsonify({'message': 'Invalid place id', 'result': 'failure'}), 400
     else:
-        return jsonify({'message': 'Place not found', 'result': 'failure'}), 404
+        return jsonify({'message': 'Place id is missing', 'result': 'failure'}), 400
 
 if __name__=='__main__':
     app.run(host='0.0.0.0',port=8080)

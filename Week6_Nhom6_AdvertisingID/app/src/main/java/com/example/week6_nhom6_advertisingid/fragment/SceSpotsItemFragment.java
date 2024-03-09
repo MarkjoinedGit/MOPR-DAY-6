@@ -1,6 +1,7 @@
 package com.example.week6_nhom6_advertisingid.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.week6_nhom6_advertisingid.R;
+import com.example.week6_nhom6_advertisingid.SceSpotsDetails;
 import com.example.week6_nhom6_advertisingid.fragment.placeholder.PlaceholderContent;
 import com.example.week6_nhom6_advertisingid.regCallbacks.ScenicSpotsReqCallback;
 
@@ -124,4 +126,8 @@ public class SceSpotsItemFragment extends Fragment {
 
         urlReq.start();
     }
+
+
+
+
 }

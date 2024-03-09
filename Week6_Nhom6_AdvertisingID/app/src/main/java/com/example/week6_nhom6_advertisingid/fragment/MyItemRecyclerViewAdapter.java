@@ -3,13 +3,16 @@ package com.example.week6_nhom6_advertisingid.fragment;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.week6_nhom6_advertisingid.SceSpotsDetails;
 import com.example.week6_nhom6_advertisingid.fragment.placeholder.PlaceholderContent.PlaceholderItem;
 import com.example.week6_nhom6_advertisingid.databinding.FragmentSceSpotsItemBinding;
 
