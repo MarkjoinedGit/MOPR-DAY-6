@@ -90,7 +90,7 @@ public class SceSpotsItemFragment extends Fragment {
         CronetEngine.Builder builder = new CronetEngine.Builder(this.requireContext());
         CronetEngine engine = builder.build();
 
-        UrlRequest urlReq = engine.newUrlRequestBuilder("http://10.0.122.51:8080/place",
+        UrlRequest urlReq = engine.newUrlRequestBuilder("http://192.168.1.10:8080/place",
                         new ScenicSpotsReqCallback(
                                 (jsonObject -> {
                                     try {

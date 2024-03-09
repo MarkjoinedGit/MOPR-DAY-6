@@ -45,7 +45,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         holder.mPart.setText(mValues.get(position).placeList.get(2));
         holder.mSummary.setText(mValues.get(position).placeList.get(3));
         Log.i(this.getClass().getSimpleName(), (String) holder.mSummary.getText());
-        String thumbUrl = "http://10.0.122.51:8080/" + mValues.get(position).placeList.get(4);
+        String thumbUrl = "http://192.168.1.10:8080/" + mValues.get(position).placeList.get(4);
         Glide.with(mFragment)
                 .load(thumbUrl)
                 .into(holder.mThumbnail);
