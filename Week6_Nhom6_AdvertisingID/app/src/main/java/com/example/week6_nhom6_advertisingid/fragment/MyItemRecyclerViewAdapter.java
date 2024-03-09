@@ -33,7 +33,6 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         return new ViewHolder(FragmentSceSpotsItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
-
     }
 
     @Override
